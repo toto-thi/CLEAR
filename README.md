@@ -2,7 +2,7 @@
 
 This repository implements an AI-driven dermatological diagnosis pipeline using a multi-agent system orchestrated with **LangGraph**. Developed as part of a Master's Thesis, it mimics a clinical workflow to analyze skin lesion images, leveraging Large Language Models (LLMs) and a **Visual Knowledge Base (VKB)** for grounded, evidence-based reasoning.
 
-## 🌟 Key Features
+## Overview
 
 - **Multi-Agent Orchestration:** Specialized agents (Lab, Triage, Diagnosis, Critique, Synthesizer) collaborate via LangGraph to provide structured clinical insights.
 - **Visual Knowledge Base (VKB):** Uses **BiomedCLIP** embeddings stored in **Qdrant** to retrieve similar reference cases for few-shot diagnostic prompting.
@@ -29,11 +29,7 @@ The workflow mimics a professional dermatological consultation:
 
 ### Installation
 
-1.  **Clone the repository:**
-    ```bash
-    git clone https://github.com/your-repo/CLEAR.git
-    cd CLEAR
-    ```
+1.  **Download/Clone the repository**
 
 2.  **Infrastructure Setup:**
     Start the Qdrant database using Docker Compose:
