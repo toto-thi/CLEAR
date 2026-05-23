@@ -53,25 +53,37 @@ The workflow mimics a professional dermatological consultation:
 
 Before running the diagnosis pipeline, you must index the dermatological dataset:
 1.  Ensure your dataset is placed in the `dataset/` directory.
-2.  Run the `experiments/create_kb.ipynb` notebook to generate embeddings and populate the Qdrant collection.
+2.  Initialize the Knowledge Base:
+    ```bash
+    python main.py init-kb
+    ```
+    *(Note: This command currently provides guidance to run the `experiments/create_kb.ipynb` notebook to populate the Qdrant collection).*
 
 ## 📊 Usage
 
 ### Running the Pipeline
 
-You can execute the full diagnostic workflow on the test dataset using the provided CLI:
+You can execute the full diagnostic workflow on the test dataset using the unified CLI:
 
 ```bash
 # Run with Google Gemini
-python experiments/final-pipeline.py --provider gemini --output final-gemini.jsonl
+python main.py run --provider gemini --output final-gemini.jsonl
 
 # Run with OpenAI GPT-5
-python experiments/final-pipeline.py --provider openai --output final-gpt.jsonl
+python main.py run --provider openai --output final-gpt.jsonl
+
+# Resume an interrupted run
+python main.py run --provider gemini --resume
 ```
 
 ### Evaluation
 
-Use the notebooks in the `evaluation/` directory to analyze results:
+Trigger the evaluation suite or use the analysis notebooks:
+```bash
+python main.py evaluate
+```
+*(Note: Detailed analysis is currently performed using notebooks in the `evaluation/` directory)*
+
 - `score_calculator.ipynb`: Primary notebook for calculating accuracy, specificity, and groundedness metrics.
 - `ablation_score.ipynb`: Used to measure the impact of specific agents or logic changes.
 
