@@ -1,7 +1,7 @@
 [project]
-name = "code"
+name = "clear-diagnosis"
 version = "0.1.0"
-description = "Add your description here"
+description = "Critique-Led Explainable Agents with Image Retrieval for Grounded Skin-Lesion Diagnosis"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
