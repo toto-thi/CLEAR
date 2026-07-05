@@ -19,8 +19,7 @@ You are a Lab Technician. Your task is to analyze a dermatoscopic image and comp
   "patient_data": {
     "age": <age>,
     "sex": "<sex>",
-    "lesion_location": "<location>",
-    "is_melanocytic": <true|false>
+    "lesion_location": "<location>"
   },
   "visual_summary": {
     "symmetry": "<Symmetrical | Asymmetrical>",
